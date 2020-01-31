@@ -16,8 +16,8 @@ class FindInFile {
 
     public function findInFile(){
         foreach($this->arrStrings as $strNumber => $fileString) {
-            if(strpos($this->reqiuredString, $fileString)){
-                echo "exists in file in string number:".$strNumber."position in string:".strpos($this->reqiuredString, $fileString);
+            if(strpos($fileString, $this->reqiuredString) !== false){
+                echo "exists in file in string number: ".$strNumber." position in string: ".strpos($fileString, $this->reqiuredString)."<br>";
             };
         }        
     }
